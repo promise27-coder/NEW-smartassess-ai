@@ -1,0 +1,1 @@
+"""SmartAssess AI backend package."""
