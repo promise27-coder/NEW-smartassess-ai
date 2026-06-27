@@ -1,1 +1,1 @@
-"""SmartAssess AI backend package."""
+﻿"""SmartAssess AI backend application package."""

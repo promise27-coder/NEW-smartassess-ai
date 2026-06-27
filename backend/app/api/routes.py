@@ -1,8 +1,8 @@
+﻿"""API router composition for SmartAssess AI."""
+
 from fastapi import APIRouter
 
-router = APIRouter()
+from app.api.health import router as health_router
 
-
-@router.get("/")
-def read_root() -> dict[str, str]:
-    return {"message": "SmartAssess AI API Running"}
+api_router = APIRouter()
+api_router.include_router(health_router)

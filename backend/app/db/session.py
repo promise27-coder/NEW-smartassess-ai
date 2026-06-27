@@ -1,7 +1,5 @@
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+﻿"""Compatibility exports for database sessions."""
 
-from app.core.config import settings
+from app.db.database import SessionLocal, engine, get_db
 
-engine = create_engine(settings.database_url, pool_pre_ping=True)
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+__all__ = ["SessionLocal", "engine", "get_db"]
